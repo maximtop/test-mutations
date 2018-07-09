@@ -58,7 +58,7 @@
         const makeVisible = document.querySelector('#makeVisible');
         makeVisible.addEventListener('click', (e) => {
             e.preventDefault();
-            testBlock.style.display = 'block';
+            testBlock.setAttribute('style', 'display: block!important');
         });
         // change color once INTERVAL
         const INTERVAL = 5;
