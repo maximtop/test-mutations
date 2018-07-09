@@ -20,12 +20,12 @@
                             <div class="textBlock">Block with changing color</div>
                             <div class="counter"></div>
                         </div>
-
                     </div>
                 </div>
                 <div class="row p-3 justify-content-around">
                     <button type="button" class="btn btn-danger" id="addRed">Add red</button>
                     <button type="button" class="btn btn-success" id="addGreen">Add green</button>
+                    <button type="button" class="btn btn-primary" id="addBlock">Add block</button>
                 </div>
             </div>
         </div>
@@ -33,6 +33,7 @@
     <script>
         const addRedButton = document.querySelector('#addRed');
         const addGreenButton = document.querySelector('#addGreen');
+        const addBlock = docuemtn.querySelector('#addBlock');
         const testBlock = document.querySelector('.testBlock');
         addRedButton.addEventListener('click', (e) => {
             e.preventDefault();
@@ -44,6 +45,15 @@
             console.log('Add green clicked');
             testBlock.style.background = '#28a745';
         });
+        addBlock.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('Add block clicked');
+            const blockHtml = `<div class="testBlock justify-content-center align-items-center d-flex flex-column" style='background-color:red'>
+                            <div class="textBlock">Block with changing color</div>
+                            <div class="counter"></div>
+                        </div>`;
+            testBlock.insertAdjacentHTML('beforeend', blockHtml);
+        })
         // change color once INTERVAL
         const INTERVAL = 5;
         const counter = document.querySelector('.counter');
