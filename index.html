@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="container">
-        <div id="testBlock">Block with red collor</div>
+        <div class="col-5">
+            <div id="testBlock">Block with red collor</div>
+        </div>
     </div>
     <button type="button" class="btn btn-primary" id="addRed">Add red</button>
     <button type="button" class="btn btn-primary" id="addBlue">Add red</button>
@@ -17,7 +19,7 @@
     <script>
         const addRedButton = document.querySelector('#addRed');
         const addBlueButton = document.querySelector('#addBlue');
-        const testBlock = docuemnt.querySelector('#testBlock');
+        const testBlock = document.querySelector('#testBlock');
         addRedButton.addEventListener('click', (e) => {
             e.preventDefault();
             console.log('Add red clicked');
