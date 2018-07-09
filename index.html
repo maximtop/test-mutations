@@ -26,6 +26,7 @@
                     <button type="button" class="btn btn-danger" id="addRed">Add red</button>
                     <button type="button" class="btn btn-success" id="addGreen">Add green</button>
                     <button type="button" class="btn btn-primary" id="addBlock">Add block</button>
+                    <button type="button" class="btn btn-warning" id="makeVisible">Make visible</button>
                 </div>
             </div>
         </div>
@@ -53,7 +54,12 @@
                             <div class="counter"></div>
                         </div>`;
             testBlock.insertAdjacentHTML('afterend', blockHtml);
-        })
+        });
+        const makeVisible = document.querySelector('#makeVisible');
+        makeVisible.addEventListener('click', (e) => {
+            e.preventDefault();
+            testBlock.style.display = 'block';
+        });
         // change color once INTERVAL
         const INTERVAL = 5;
         const counter = document.querySelector('.counter');
