@@ -46,7 +46,7 @@
         });
         // change color once in 3 seconds
         const counter = document.querySelector('.counter');
-        const remainigTime = 3;
+        let remainigTime = 3;
         const updateText = () => {
             const text = `Color change in ${remainigTime} sec`;
             counter.innerText = text;
