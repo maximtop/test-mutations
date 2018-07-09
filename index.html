@@ -42,7 +42,11 @@
             e.preventDefault();
             console.log('Add green clicked');
             testBlock.style.background = '#28a745';
-        })
+        });
+        // change color once in 3 seconds
+        setInterval(() => {
+            testBlock.style.background = '#6c757d';
+        }, 3000);
     </script>
 </body>
 
