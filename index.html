@@ -44,7 +44,7 @@
             console.log('Add green clicked');
             testBlock.style.background = '#28a745';
         });
-        // change color once in 3 seconds
+        // change color once INTERVAL
         const INTERVAL = 5;
         const counter = document.querySelector('.counter');
         let remainigTime = INTERVAL;
@@ -61,7 +61,7 @@
                 updateText();
             }
             updateText();
-        }, INTERVAL * 1000);
+        }, 1000);
     </script>
 </body>
 
