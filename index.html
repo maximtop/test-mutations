@@ -18,6 +18,7 @@
                     <div class="col-12">
                         <div class="testBlock justify-content-center align-items-center d-flex">
                             <div class="textBlock">Block with changing color</div>
+                            <div class="counter"></div>
                         </div>
 
                     </div>
@@ -44,9 +45,22 @@
             testBlock.style.background = '#28a745';
         });
         // change color once in 3 seconds
+        const counter = document.querySelector('.counter');
+        const remainigTime = 3;
+        const updateText = () => {
+            const text = `Color change in ${remainigTime} sec`;
+            counter.innerText = text;
+        }
+        updateText();
         setInterval(() => {
-            testBlock.style.background = '#6c757d';
-        }, 3000);
+            remainigTime -= 1;
+            if (remainigTime === 0) {
+                testBlock.style.background = '#6c757d';
+                remainigTime = 3;
+                updateText();
+            }
+            updateText();
+        }, 1000);
     </script>
 </body>
 
