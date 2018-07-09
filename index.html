@@ -45,8 +45,9 @@
             testBlock.style.background = '#28a745';
         });
         // change color once in 3 seconds
+        const INTERVAL = 5;
         const counter = document.querySelector('.counter');
-        let remainigTime = 3;
+        let remainigTime = INTERVAL;
         const updateText = () => {
             const text = `Color change in ${remainigTime} sec`;
             counter.innerText = text;
@@ -56,11 +57,11 @@
             remainigTime -= 1;
             if (remainigTime === 0) {
                 testBlock.style.background = '#6c757d';
-                remainigTime = 3;
+                remainigTime = INTERVAL;
                 updateText();
             }
             updateText();
-        }, 1000);
+        }, INTERVAL * 1000);
     </script>
 </body>
 
